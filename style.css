@@ -1,0 +1,27 @@
+
+*{box-sizing:border-box} :root{color-scheme:dark}
+body{margin:0;background:#020604;color:#b9ffd6;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(80,255,145,.018),rgba(80,255,145,.018) 1px,transparent 1px,transparent 4px)}
+main{max-width:720px;margin:auto;padding:22px 16px 60px}
+header{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px}
+.eyebrow,.section-title,label{font-size:11px;letter-spacing:.18em;color:#62c98d}
+h1{font-size:27px;letter-spacing:.08em;margin:4px 0 0;color:#d8ffe6}
+.status{font-size:11px;border:1px solid #275b3b;padding:7px 9px;border-radius:4px;color:#70b88b}
+.status.on{color:#7dffad;border-color:#4cff89;box-shadow:0 0 12px #19ff6a44}
+.radar-wrap{position:relative;width:min(92vw,560px);aspect-ratio:1;margin:0 auto 18px}
+#radar{width:100%;height:100%;display:block;filter:drop-shadow(0 0 8px #1dff6b22)}
+.center-readout{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;text-shadow:0 0 10px #00ff66}
+.frequency{font-size:clamp(34px,10vw,64px);font-weight:700;color:#d8ffe6;line-height:.9}
+.hz{font-size:13px;letter-spacing:.3em;margin-top:7px}.strength{font-size:11px;margin-top:13px;letter-spacing:.12em}
+.meters{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.metric,.panel{border:1px solid #173c27;background:#061009cc;border-radius:8px}
+.metric{padding:10px}.metric span{display:block;font-size:9px;color:#4c9d69;letter-spacing:.15em;margin-bottom:4px}.metric b{font-size:12px;color:#caffdc}
+.panel{padding:14px;margin-top:10px}
+button{font:inherit;background:#07160c;color:#91fcb7;border:1px solid #286d42;border-radius:5px;padding:12px;cursor:pointer}
+button:disabled{opacity:.35}.primary{width:100%;background:#0a2815;border-color:#35d96e;font-weight:700;letter-spacing:.1em;box-shadow:inset 0 0 16px #1dff6b12}
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 16px}
+label{display:flex;justify-content:space-between;margin:13px 0 7px;letter-spacing:.08em}
+input[type=range]{width:100%;accent-color:#52ff8d}.range-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.note{font-family:system-ui,sans-serif;color:#79a888;font-size:12px;line-height:1.45;margin:14px 0 0}
+.section-title{margin-bottom:10px}.log{max-height:220px;overflow:auto}.event{display:grid;grid-template-columns:1fr auto auto;gap:10px;padding:8px 2px;border-bottom:1px solid #12321f;font-size:11px}.empty{font-size:11px;color:#477458;padding:6px 0}
+.hot{color:#e4ffeb}

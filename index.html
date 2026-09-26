@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030806">
+  <title>Noise Radar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <div class="eyebrow">ACOUSTIC TRACKER</div>
+      <h1>NOISE RADAR</h1>
+    </div>
+    <div id="status" class="status">OFFLINE</div>
+  </header>
+
+  <section class="radar-wrap">
+    <canvas id="radar" width="800" height="800"></canvas>
+    <div class="center-readout">
+      <div id="freq" class="frequency">—</div>
+      <div class="hz">Hz</div>
+      <div id="strength" class="strength">NO TARGET</div>
+    </div>
+  </section>
+
+  <section class="meters">
+    <div class="metric"><span>LEVEL</span><b id="db">— dBFS</b></div>
+    <div class="metric"><span>PEAK</span><b id="peak">— Hz</b></div>
+    <div class="metric"><span>LOCK</span><b id="lockLabel">AUTO</b></div>
+  </section>
+
+  <section class="panel">
+    <button id="start" class="primary">START LISTENING</button>
+    <div class="buttons">
+      <button id="lock" disabled>LOCK TARGET</button>
+      <button id="clear">CLEAR LOG</button>
+    </div>
+
+    <label>Detection range <span id="rangeText">3.5–20 kHz</span></label>
+    <div class="range-row">
+      <input id="minFreq" type="range" min="1000" max="12000" step="250" value="3500">
+      <input id="maxFreq" type="range" min="6000" max="22000" step="250" value="20000">
+    </div>
+
+    <label>Sensitivity <span id="sensText">Medium</span></label>
+    <input id="sensitivity" type="range" min="0" max="2" step="1" value="1">
+
+    <p class="note">Radar radius represents signal strength, not physical direction. Once the chirp appears, lock its frequency and walk around—the stronger/closer the return moves toward the center.</p>
+  </section>
+
+  <section class="panel">
+    <div class="section-title">DETECTION LOG</div>
+    <div id="log" class="log"><div class="empty">Waiting for detections…</div></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
